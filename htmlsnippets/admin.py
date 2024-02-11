@@ -8,7 +8,8 @@ from htmlsnippets.models import HTMLSnippet
 class HTMLSnippetAdmin(admin.ModelAdmin):
     list_display = ('title', 'tag', 'render_preview')
 
-    def render_preview(self, obj):
+    @staticmethod
+    def render_preview(obj):
         # Create the URL for the view you want to open in a new tab
         url = reverse('htmlsnippets_htmlsnippet_render', args=[obj.pk])
         # HTML structure for the preview with an arrow symbol
