@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rendered Snippet - {{ context.title }}</title>
+    <meta name="tags" content="{{ context.tag }}"> 
+</head>
+<body>
+    <h1>Snippet Details</h1>
+    <p><strong>Tag:</strong> {{ context.tag }}</p> <hr>
+
+    <h2>Snippet Content</h2>
+    <div id="snippet-code">
+        {{ context.code }}
+    </div>
+</body>
+</html>
